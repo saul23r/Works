@@ -1,0 +1,15 @@
+<h2>Registrate</h2>
+
+<%  if flash[:alert]      %>
+<%=  flash[:alert] %>
+<% end %>
+
+
+
+
+<%= form_for(@user) do |f| %>
+  email: <%f.text_field :name %><br/>
+  password: <%=f.password_field :password %><br/>
+  Confirmacion de password: <%=f.password_field :password_confirmation %><br/>
+  <%= f.submit 'Registrarse' %>
+  <% end %>
