@@ -18,9 +18,9 @@
         <td><%= student.name %></td>
         <td><%= student.edad %></td>
         <td><%= student.domicilio %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', student, class: ' button success' %></td>
+        <td><%= link_to 'Edit', edit_student_path(student), class:' warning button' %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Esta Usted Seguro?' },class:'alert button' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Student', new_student_path %>
+<%= link_to 'Nuevo Estudiante', new_student_path %>
