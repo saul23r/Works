@@ -1,0 +1,45 @@
+<%= form_for @libro do |f| %>
+
+    <% if @libro.errors.any? %>
+        <div id ="error_explanation">
+            <h2>Errores:</h2>
+          <ul>
+          <% @libro.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+
+
+          <% end %>
+          </ul>
+          </div>
+        <% end %>
+
+  Titulo: <%= f.text_field :titulo %><br />
+    Autor: <%= f.text_field :autor %><br />
+    Descripcion: <%= f.text_area :descripcion %><br />
+    Año: <%= f.text_field :año %><br />
+
+<%= f.submit 'Enviar datos' %>
+ <% end %>
+
+<hr/>
+
+Listado de libros <br/>
+<% if !@libros.blank?  %>
+<table border="1">
+  <tr>
+  <th>Titulo</th>
+  <th>Año</th>
+  </tr>
+<% for item in @libros %>
+   <tr>
+  <td><%= link_to item.titulo, :controller => :prestamos, :action => :new, :id => item.id %></td> <td> (<%= item.año %>)</td>
+  </tr>
+  <% end %>
+  </table>
+<% else %>
+
+    No hay libros registrados.
+
+
+<% end %>
+
