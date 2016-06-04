@@ -1,0 +1,25 @@
+<%= form_for(@genre_entity) do |f| %>
+  <% if @genre_entity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@genre_entity.errors.count, "error") %> prohibited this genre_entity from being saved:</h2>
+
+      <ul>
+      <% @genre_entity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br>
+    <%= f.text_area :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br>
+    <%= f.text_area :Description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

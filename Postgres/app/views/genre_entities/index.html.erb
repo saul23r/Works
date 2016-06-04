@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Genre Entities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @genre_entities.each do |genre_entity| %>
+      <tr>
+        <td><%= genre_entity.Name %></td>
+        <td><%= genre_entity.Description %></td>
+        <td><%= link_to 'Show', genre_entity %></td>
+        <td><%= link_to 'Edit', edit_genre_entity_path(genre_entity) %></td>
+        <td><%= link_to 'Destroy', genre_entity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Genre entity', new_genre_entity_path %>

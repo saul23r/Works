@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @genre_entity.Name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @genre_entity.Description %>
+</p>
+
+<%= link_to 'Edit', edit_genre_entity_path(@genre_entity) %> |
+<%= link_to 'Back', genre_entities_path %>
