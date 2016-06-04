@@ -1,0 +1,6 @@
+<h2>Bienvenido</h2>
+<%= link_to 'registrate', signup_path %>
+<%= link_to 'Iniciar sesion', login_path %>
+<% if logged_in? %>
+    <%= link_to 'Perfil', user_path %>
+<% end %>
