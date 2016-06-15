@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails Quiz: test" uuid="933f65fd-2ece-4c87-86ad-1b6ead64265f" />
+    <data-source name="Rails Quiz: development" uuid="fef66391-83e1-49c7-9c18-e290a4dff510">
+      <user-name>postgres</user-name>
+      <user-password>dfc4dfc3dfc4dfc0dfcb</user-password>
+      <schema-pattern>quiz.pg_catalog quiz.public</schema-pattern>
+      <default-schemas>quiz.public</default-schemas>
+    </data-source>
+    <data-source name="Rails Quiz: production" uuid="a1cc8be1-d29d-46a8-bde9-2fd0a17945d6">
+      <user-name>Quiz</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddffbdfffdfe3dff0dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="PostgreSQL - quiz@localhost" uuid="7517d962-d187-4ab5-bf2e-3b6503d00852">
+      <secret-storage>memory</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>quiz.pg_catalog quiz.public</schema-pattern>
+      <default-schemas>quiz.public</default-schemas>
+    </data-source>
+  </component>
+</project>
