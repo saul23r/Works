@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Depot</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' =>:'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
+  <title>Pragprog Books Online Store</title>
+
+  <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => 'reload' %>
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => 'reload' %><!-- <label id="code.jlt"/> -->
+  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
 </head>
-
-
-<body class='<%= controller.controller_name %>'>
-
-
-<%= yield %>
-
+<body class="<%= controller.controller_name %>">
+<div id="banner">
+  <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
+  <span class="title"><%= @page_title %></span><!-- <label id="code.depot.e.title"/> -->
+</div>
+<div id="columns">
+  <div id="side">
+    <ul>
+      <li><a href="http://www....">Home</a></li>
+      <li><a href="http://www..../faq">Questions</a></li>
+      <li><a href="http://www..../news">News</a></li>
+      <li><a href="http://www..../contact">Contact</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <%= yield %><!-- <label id="code.depot.e.include"/> -->
+  </div>
+</div>
 </body>
 </html>
