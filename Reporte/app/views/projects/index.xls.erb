@@ -1,0 +1,17 @@
+<table border="1">
+  <tr>
+    <th>NOmbre</th>
+    <th>Monto</th>
+    <th>Fecha de Inicio</th>
+  </tr>
+  <% @projects.each do |project| %>
+  <tr>
+    <td><%= project.name %></td>
+    <td><%= project.mount %></td>
+    <td><%= project.init_date %></td>
+
+  </tr>
+
+  <%end%>
+
+</table>

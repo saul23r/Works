@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Projects</h1>
+<%= link_to "CSV", projects_path(format: "csv") %>
+<%= link_to "Excel", projects_path(format: "xls") %>
+<%= link_to "PDF", projects_path(format: "pdf") %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mount</th>
+      <th>Init date</th>
+      <th>End date</th>
+      <th>Owner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.mount %></td>
+        <td><%= project.init_date %></td>
+        <td><%= project.end_date %></td>
+        <td><%= project.owner %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project', new_project_path %>
